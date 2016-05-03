@@ -1,0 +1,9 @@
+variable names - the components or other should start with a capital letter. The var name in line 1 'var CommentBox' can be created with lower case letter. But Reat framework understands it is a react based name and tried to convert it to an element when it encounters the variable as tag.
+
+like this:
+	<CommentBox />   --> 	React.createElement(CommentBox, null)
+
+if a tag starts with a lower case letter, babel and react just outputs it as a tag and dont try to render it.
+
+like: 
+	<commentBox />    -->  <commentBox></commentBox>
